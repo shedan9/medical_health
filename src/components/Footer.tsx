@@ -3,11 +3,11 @@ import { Newspaper, Globe, Mail } from "lucide-react";
 
 export default function Footer() {
   const links = [
-    { name: "Privacy Policy", path: "#" },
-    { name: "Terms of Service", path: "#" },
-    { name: "Medical Disclaimer", path: "#" },
-    { name: "Contact Info", path: "#" },
-    { name: "Editorial Guidelines", path: "#" },
+    { name: "Privacy Policy", path: "/" },
+    { name: "Terms of Service", path: "/" },
+    { name: "Medical Disclaimer", path: "/" },
+    { name: "Contact Info", path: "/" },
+    { name: "Editorial Guidelines", path: "/" },
   ];
 
   return (

@@ -1,4 +1,5 @@
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -23,10 +24,10 @@ export default function Hero() {
         <p className="text-slate-200 text-lg leading-relaxed mb-8 opacity-90">
           How emerging CRISPR technologies are redefining patient outcomes in late-stage clinical trials across the European Union.
         </p>
-        <button className="bg-white text-primary font-bold px-8 py-3 rounded-md hover:bg-slate-100 transition-colors flex items-center gap-2">
+        <Link to="/article" className="inline-flex bg-white text-primary font-bold px-8 py-3 rounded-md hover:bg-slate-100 transition-colors items-center gap-2">
           Read Full Analysis
           <ArrowRight className="w-4 h-4" />
-        </button>
+        </Link>
       </div>
       
       <div className="absolute bottom-12 right-12 flex gap-2">

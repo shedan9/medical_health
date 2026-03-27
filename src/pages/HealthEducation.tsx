@@ -40,19 +40,19 @@ export default function HealthEducation() {
           </div>
           
           <div className="space-y-2">
-            <Link to="#" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1">
+            <Link to="/" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1">
               <Newspaper className="w-5 h-5" />
               <span className="text-sm">Latest Updates</span>
             </Link>
-            <Link to="#" className="flex items-center gap-3 px-4 py-3 bg-white text-primary font-semibold rounded-md shadow-sm transition-transform duration-300 hover:translate-x-1">
+            <Link to="/education" className="flex items-center gap-3 px-4 py-3 bg-white text-primary font-semibold rounded-md shadow-sm transition-transform duration-300 hover:translate-x-1">
               <Library className="w-5 h-5" />
               <span className="text-sm">Medical Library</span>
             </Link>
-            <Link to="#" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1">
+            <Link to="/search" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1">
               <Brain className="w-5 h-5" />
               <span className="text-sm">Expert Insights</span>
             </Link>
-            <Link to="#" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1">
+            <Link to="/" className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1">
               <MessageSquare className="w-5 h-5" />
               <span className="text-sm">Community Feed</span>
             </Link>
@@ -95,10 +95,10 @@ export default function HealthEducation() {
                   <p className="text-slate-200 text-sm font-light leading-relaxed mb-6">
                     Discover how managing blood sugar fluctuations through editorial-curated nutrition can transform your cognitive performance and metabolic health.
                   </p>
-                  <button className="flex items-center gap-2 text-white font-bold text-sm group/btn">
+                  <Link to="/article" className="inline-flex items-center gap-2 text-white font-bold text-sm group/btn">
                     READ FULL ARTICLE
                     <TrendingUp className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
+                  </Link>
                 </div>
               </div>
               
@@ -131,14 +131,14 @@ export default function HealthEducation() {
                 <h2 className="text-3xl font-headline font-extrabold tracking-tighter text-slate-900">Health Disciplines</h2>
                 <p className="text-slate-500 text-sm mt-1">Scientific perspectives on human longevity.</p>
               </div>
-              <button className="text-primary font-bold text-xs uppercase tracking-widest hover:underline decoration-primary/30">
+              <Link to="/search" className="text-primary font-bold text-xs uppercase tracking-widest hover:underline decoration-primary/30">
                 View All Categories
-              </button>
+              </Link>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {disciplines.map((d) => (
-                <div key={d.name} className="group cursor-pointer">
+                <Link to="/search" key={d.name} className="group cursor-pointer">
                   <div className="aspect-square bg-surface-container-low rounded-xl mb-4 overflow-hidden relative">
                     <img
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
@@ -150,7 +150,7 @@ export default function HealthEducation() {
                   </div>
                   <h4 className="font-headline font-bold text-slate-900">{d.name}</h4>
                   <p className="text-xs text-slate-500">{d.articles} Articles</p>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
@@ -176,7 +176,7 @@ export default function HealthEducation() {
                     <span className="text-tertiary font-bold text-[10px] uppercase mb-2">{s.part}</span>
                     <h3 className="font-headline font-bold text-xl text-slate-900 mb-3 leading-tight">{s.title}</h3>
                     <p className="text-xs text-slate-600 leading-relaxed mb-6">{s.desc}</p>
-                    <Link to="#" className="mt-auto text-primary font-bold text-xs flex items-center gap-2 group">
+                    <Link to="/article" className="mt-auto text-primary font-bold text-xs flex items-center gap-2 group">
                       START SERIES <TrendingUp className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>

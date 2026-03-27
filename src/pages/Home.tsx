@@ -2,6 +2,7 @@ import Hero from "@/src/components/Hero";
 import ArticleCard from "@/src/components/ArticleCard";
 import Sidebar from "@/src/components/Sidebar";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -19,10 +20,10 @@ export default function Home() {
                 Latest Clinical Updates
               </h2>
             </div>
-            <button className="text-primary text-sm font-bold flex items-center gap-1 group">
+            <Link to="/search" className="text-primary text-sm font-bold flex items-center gap-1 group">
               View Archive
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </Link>
           </header>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

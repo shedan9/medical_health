@@ -9,45 +9,45 @@ export default function SearchResults() {
           <div>
             <h3 className="font-headline font-bold text-slate-900 mb-4 text-lg">Filter Results</h3>
             <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between p-3 bg-white text-primary font-semibold rounded-md shadow-sm">
+              <Link to="/search" className="flex items-center justify-between p-3 bg-white text-primary font-semibold rounded-md shadow-sm">
                 <div className="flex items-center gap-3">
                   <Newspaper className="w-5 h-5" />
                   <span className="text-sm">Latest Updates</span>
                 </div>
                 <span className="text-xs font-bold">12</span>
-              </div>
-              <div className="flex items-center justify-between p-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1 cursor-pointer">
+              </Link>
+              <Link to="/search" className="flex items-center justify-between p-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1 cursor-pointer">
                 <div className="flex items-center gap-3">
                   <Library className="w-5 h-5" />
                   <span className="text-sm">Medical Library</span>
                 </div>
                 <span className="text-xs">48</span>
-              </div>
-              <div className="flex items-center justify-between p-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1 cursor-pointer">
+              </Link>
+              <Link to="/search" className="flex items-center justify-between p-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1 cursor-pointer">
                 <div className="flex items-center gap-3">
                   <Brain className="w-5 h-5" />
                   <span className="text-sm">Expert Insights</span>
                 </div>
                 <span className="text-xs">15</span>
-              </div>
-              <div className="flex items-center justify-between p-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1 cursor-pointer">
+              </Link>
+              <Link to="/search" className="flex items-center justify-between p-3 text-slate-500 hover:bg-slate-200 rounded-md transition-transform duration-300 hover:translate-x-1 cursor-pointer">
                 <div className="flex items-center gap-3">
                   <MessageSquare className="w-5 h-5" />
                   <span className="text-sm">Community Feed</span>
                 </div>
                 <span className="text-xs">5</span>
-              </div>
+              </Link>
             </div>
           </div>
           
           <div className="pt-6 border-t border-outline-variant/20">
             <h4 className="font-headline font-semibold text-sm text-slate-900 mb-3">Topic Categories</h4>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-medium">Cardiology</span>
-              <span className="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Genetics</span>
-              <span className="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Public Health</span>
-              <span className="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Surgery</span>
-            </div>
+          <div className="flex flex-wrap gap-2">
+            <Link to="/search" className="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-medium">Cardiology</Link>
+            <Link to="/search" className="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Genetics</Link>
+            <Link to="/search" className="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Public Health</Link>
+            <Link to="/search" className="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Surgery</Link>
+          </div>
           </div>
           
           <div className="mt-4 p-4 bg-editorial-gradient rounded-lg text-white">
@@ -74,7 +74,7 @@ export default function SearchResults() {
         </header>
 
         <div className="space-y-8">
-          <article className="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] group cursor-pointer transition-all hover:-translate-y-1">
+          <Link to="/article" className="block bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] group cursor-pointer transition-all hover:-translate-y-1">
             <div className="flex flex-col md:flex-row gap-8">
               <div className="w-full md:w-64 h-48 bg-surface-container-low rounded-lg overflow-hidden flex-shrink-0">
                 <img
@@ -105,15 +105,15 @@ export default function SearchResults() {
                     </div>
                     <span className="text-xs font-semibold text-on-surface-variant">Dr. Elena Rodriguez</span>
                   </div>
-                  <button className="text-primary text-xs font-bold uppercase tracking-widest border-b border-primary/20 pb-0.5 group-hover:border-primary transition-all">
+                  <span className="text-primary text-xs font-bold uppercase tracking-widest border-b border-primary/20 pb-0.5 group-hover:border-primary transition-all">
                     Read Analysis
-                  </button>
+                  </span>
                 </div>
               </div>
             </div>
-          </article>
+          </Link>
 
-          <article className="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] group cursor-pointer transition-all hover:-translate-y-1 border-l-4 border-primary">
+          <Link to="/article" className="block bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] group cursor-pointer transition-all hover:-translate-y-1 border-l-4 border-primary">
             <div className="flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-3">
@@ -136,28 +136,28 @@ export default function SearchResults() {
                   </div>
                   <span className="text-xs font-semibold text-on-surface-variant">Regulatory News Desk</span>
                 </div>
-                <button className="text-primary text-xs font-bold uppercase tracking-widest border-b border-primary/20 pb-0.5 group-hover:border-primary transition-all">
+                <span className="text-primary text-xs font-bold uppercase tracking-widest border-b border-primary/20 pb-0.5 group-hover:border-primary transition-all">
                   View Report
-                </button>
+                </span>
               </div>
             </div>
-          </article>
+          </Link>
         </div>
 
         <div className="mt-16 flex justify-center items-center gap-4">
-          <button className="w-10 h-10 flex items-center justify-center rounded-md border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-high transition-colors">
+          <Link to="/search" className="w-10 h-10 flex items-center justify-center rounded-md border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-high transition-colors">
             <ChevronLeft className="w-5 h-5" />
-          </button>
+          </Link>
           <div className="flex items-center gap-2">
-            <button className="w-10 h-10 flex items-center justify-center rounded-md bg-primary text-white font-bold">1</button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-surface-container-high font-semibold transition-colors">2</button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-surface-container-high font-semibold transition-colors">3</button>
+            <Link to="/search" className="w-10 h-10 flex items-center justify-center rounded-md bg-primary text-white font-bold">1</Link>
+            <Link to="/search" className="w-10 h-10 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-surface-container-high font-semibold transition-colors">2</Link>
+            <Link to="/search" className="w-10 h-10 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-surface-container-high font-semibold transition-colors">3</Link>
             <span className="px-2 text-outline-variant">...</span>
-            <button className="w-10 h-10 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-surface-container-high font-semibold transition-colors">8</button>
+            <Link to="/search" className="w-10 h-10 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-surface-container-high font-semibold transition-colors">8</Link>
           </div>
-          <button className="w-10 h-10 flex items-center justify-center rounded-md border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-high transition-colors">
+          <Link to="/search" className="w-10 h-10 flex items-center justify-center rounded-md border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-high transition-colors">
             <ChevronRight className="w-5 h-5" />
-          </button>
+          </Link>
         </div>
       </section>
     </main>

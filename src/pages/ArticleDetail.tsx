@@ -22,19 +22,19 @@ export default function ArticleDetail() {
         </div>
         
         <div className="flex flex-col gap-y-2">
-          <Link to="#" className="flex items-center gap-3 p-3 bg-white text-primary font-semibold rounded-md shadow-sm hover:translate-x-1 transition-transform duration-300">
+          <Link to="/" className="flex items-center gap-3 p-3 bg-white text-primary font-semibold rounded-md shadow-sm hover:translate-x-1 transition-transform duration-300">
             <Newspaper className="w-5 h-5" />
             <span>Latest Updates</span>
           </Link>
-          <Link to="#" className="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-md hover:translate-x-1 transition-transform duration-300">
+          <Link to="/education" className="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-md hover:translate-x-1 transition-transform duration-300">
             <Library className="w-5 h-5" />
             <span>Medical Library</span>
           </Link>
-          <Link to="#" className="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-md hover:translate-x-1 transition-transform duration-300">
+          <Link to="/search" className="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-md hover:translate-x-1 transition-transform duration-300">
             <Brain className="w-5 h-5" />
             <span>Expert Insights</span>
           </Link>
-          <Link to="#" className="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-md hover:translate-x-1 transition-transform duration-300">
+          <Link to="/" className="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-200 rounded-md hover:translate-x-1 transition-transform duration-300">
             <MessageSquare className="w-5 h-5" />
             <span>Community Feed</span>
           </Link>
@@ -44,9 +44,9 @@ export default function ArticleDetail() {
           <div className="bg-primary-fixed p-6 rounded-xl">
             <p className="text-on-primary-fixed font-headline font-bold mb-2">Clinical Circle</p>
             <p className="text-xs text-on-surface-variant mb-4">Exclusive access to peer-reviewed datasets.</p>
-            <button className="w-full bg-white text-primary py-2 rounded-md font-bold text-sm shadow-sm active:opacity-80 transition-opacity">
+            <Link to="/search" className="block w-full bg-white text-primary py-2 rounded-md font-bold text-sm shadow-sm active:opacity-80 transition-opacity text-center">
               Join Clinical Circle
-            </button>
+            </Link>
           </div>
         </div>
       </aside>
@@ -181,7 +181,7 @@ export default function ArticleDetail() {
         <h4 className="font-headline font-extrabold text-lg text-on-surface mb-8">Related Research</h4>
         <div className="space-y-8">
           {[1, 2].map((i) => (
-            <Link key={i} to="#" className="group block">
+            <Link key={i} to="/article" className="group block">
               <img
                 className="w-full aspect-[16/9] object-cover rounded-lg mb-4 editorial-shadow grayscale group-hover:grayscale-0 transition-all duration-500"
                 src={`https://picsum.photos/seed/research-${i}/400/225`}
@@ -207,9 +207,9 @@ export default function ArticleDetail() {
                 placeholder="Your work email"
                 type="email"
               />
-              <button className="w-full bg-primary text-white py-2 rounded-md font-bold text-xs hover:opacity-90 transition-opacity">
+              <Link to="/search" className="block w-full bg-primary text-white py-2 rounded-md font-bold text-xs hover:opacity-90 transition-opacity text-center">
                 Join 40,000+ Professionals
-              </button>
+              </Link>
             </div>
           </div>
         </div>

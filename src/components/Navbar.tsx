@@ -1,15 +1,23 @@
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Search, Menu } from "lucide-react";
 import { cn } from "@/src/lib/utils";
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
   
   const navItems = [
     { name: "Latest News", path: "/" },
     { name: "Health Education", path: "/education" },
-    { name: "About Us", path: "/about" },
+    { name: "About Us", path: "/" },
   ];
+
+  const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      navigate("/search");
+    }
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] h-20">
@@ -21,7 +29,7 @@ export default function Navbar() {
           <div className="hidden md:flex gap-8 items-center font-headline font-medium text-sm tracking-tight">
             {navItems.map((item) => (
               <Link
-                key={item.path}
+                key={item.name}
                 to={item.path}
                 className={cn(
                   "transition-all pb-1",
@@ -45,11 +53,12 @@ export default function Navbar() {
               className="block w-64 pl-10 pr-3 py-2 bg-surface-container-low border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/20 transition-all outline-none"
               placeholder="Search clinical insights..."
               type="text"
+              onKeyDown={handleSearch}
             />
           </div>
-          <button className="editorial-gradient text-white px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity">
+          <Link to="/search" className="editorial-gradient text-white px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity">
             Subscribe
-          </button>
+          </Link>
           <button className="md:hidden text-slate-900">
             <Menu className="w-6 h-6" />
           </button>

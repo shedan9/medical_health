@@ -1,4 +1,5 @@
 import { Brain, Verified, MessageSquare, Library } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   const tweets = [
@@ -50,9 +51,9 @@ export default function Sidebar() {
           ))}
         </div>
         
-        <button className="w-full mt-10 py-3 bg-white border border-outline-variant/30 text-primary font-bold text-sm rounded-lg hover:bg-slate-50 transition-colors">
+        <Link to="/search" className="block w-full mt-10 py-3 bg-white border border-outline-variant/30 text-primary font-bold text-sm rounded-lg hover:bg-slate-50 transition-colors text-center">
           Join Clinical Circle
-        </button>
+        </Link>
       </div>
       
       <div className="bg-primary-container p-6 rounded-xl text-white">
@@ -60,9 +61,9 @@ export default function Sidebar() {
         <p className="text-xs opacity-80 leading-relaxed mb-6">
           Learn about our rigorous peer-review and verification process that keeps our information authoritative.
         </p>
-        <button className="text-xs font-bold underline underline-offset-4 uppercase tracking-widest hover:opacity-80 transition-opacity">
+        <Link to="/education" className="text-xs font-bold underline underline-offset-4 uppercase tracking-widest hover:opacity-80 transition-opacity">
           Learn More
-        </button>
+        </Link>
       </div>
     </aside>
   );
